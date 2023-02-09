@@ -7,13 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   value: number = 0;
-  result: any = null
+  result: any = null;
 
   getCash() {
     this.result = this.cash(this.value);
   }
 
-  cash(value: number) {
+  private cash(value: number) {
     if (!value || (value === 1) || (value === 3) || (value < 0) || (value > 9007199254740991)) {
       return null;
     } else {
@@ -37,6 +37,4 @@ export class AppComponent {
       return result;
     }
   }
-
-
 }
